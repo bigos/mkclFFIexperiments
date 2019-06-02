@@ -5,6 +5,9 @@
 (defpackage :experiment-gtk
   (:use :common-lisp))
 
+;; abandoned project that has interesting examples
+;; https://github.com/Ramarren/cffi-clutter
+
 ;; Example 2.1: A simple window in the programming language C
 ;; http://www.crategus.com/books/cl-gtk/gtk-tutorial_2.html#SEC4
 
@@ -70,7 +73,10 @@
 (defun main ()
   (gtk-init 0 2)
   (let ((window (gtk-window-new 0)))
-    ;; (g-signal-connect window "destroy" (lambda (window) (declare (ignorable window)) (gtk-main-quit)) (cffi:null-pointer))
+    (g-signal-connect window
+                      "destroy"
+                      (lambda (window) (declare (ignorable window)) (gtk-main-quit))
+                      (cffi:null-pointer))
     (gtk-widget-show window)
     (gtk-main)))
 
