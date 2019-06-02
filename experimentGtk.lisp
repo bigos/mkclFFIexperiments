@@ -16,7 +16,7 @@
 
 (cffi:use-foreign-library libgtk)
 
-(sb-int:set-floating-point-modes :traps '(:overflow :invalid :divide-by-zero))
+;; (sb-int:set-floating-point-modes :traps '(:overflow :invalid :divide-by-zero))
 
 (cffi:defctype my-string :string
   "My own string type.")
