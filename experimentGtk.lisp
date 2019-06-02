@@ -5,6 +5,9 @@
 (defpackage :experiment-gtk
   (:use :common-lisp))
 
+;; Interesting question about cffi
+;; https://www.reddit.com/r/lisp/comments/61efpo/tutorials_or_in_depth_examples_on_how_to_use/
+
 ;; abandoned project that has interesting examples
 ;; https://github.com/Ramarren/cffi-clutter
 
