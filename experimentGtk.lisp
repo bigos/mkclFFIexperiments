@@ -5,6 +5,9 @@
 (defpackage :experiment-gtk
   (:use :common-lisp))
 
+;; Example 2.1: A simple window in the programming language C
+;; http://www.crategus.com/books/cl-gtk/gtk-tutorial_2.html#SEC4
+
 (in-package :experiment-gtk)
 
 ;; on Windows the library can be found at
