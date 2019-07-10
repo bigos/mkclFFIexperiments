@@ -1,0 +1,21 @@
+* important find
+
+http://fare.tunes.org/files/asdf3/asdf3-2014.html
+
+** relevant text
+Most CL implementations maintain their own heap with their own garbage
+collector, and then are able to dump an image of the heap on disk, that can be
+loaded back in a new process with all the state of the former process. To build
+an application, you thus start a small initial image, load plenty of code, dump
+an image, and there you are.
+
+ECL, instead, is designed to be easily embeddable in a C program; it uses the
+popular C garbage collector by Hans Boehm & al., and relies on linking and
+initializer functions rather than on dumping.
+
+To build an application with ECL (or its variant MKCL), you thus link all the
+libraries and object files together, and call the proper initialization
+functions in the correct order. Bundle operations are important to deliver
+software using ECL as a library to be embedded in some C program. Also, because
+of the overhead of dynamic linking, loading a single object file is preferable
+to a lot of smaller object files.
